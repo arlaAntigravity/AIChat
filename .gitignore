@@ -46,3 +46,22 @@ build/
 # Flutter/Dart
 .dart_tool/
 pubspec.lock
+
+# IDE
+.idea/
+*.iml
+
+# Flutter specific
+.flutter-plugins-dependencies
+.metadata
+
+# Test
+test/
+
+# Web (if not needed in repo)
+web/
+
+# Additional tools
+fetch_models.dart
+find_working_model.dart
+test_openrouter.dart
