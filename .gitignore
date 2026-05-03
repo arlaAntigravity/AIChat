@@ -65,3 +65,13 @@ web/
 fetch_models.dart
 find_working_model.dart
 test_openrouter.dart
+
+# Flutter config files (usually needed)
+# analysis_options.yaml
+# pubspec.yaml
+
+# Chat input widget (if not modified)
+# lib/widgets/chat_input.dart
+
+# README
+# README.md
