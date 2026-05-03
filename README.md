@@ -1,52 +1,70 @@
-# AI Chat - Flutter Messenger with AI Assistant
+# AI Chat - Мессенджер с AI-ассистентом на Flutter
 
-A modern Flutter-based messenger application with integrated AI assistant powered by OpenRouter API. Features smart reply suggestions, animated typing indicators, and a beautiful liquid glass UI design.
+Современное мессенджер-приложение на Flutter с интегрированным AI-ассистентом, работающим через OpenRouter API. Особенности: умные подсказки для ответов, анимированные индикаторы набора текста и красивый дизайн в стиле «жидкое стекло».
 
-## Features
+## Возможности
 
-- **AI-Powered Chat**: Communicate with AI assistants using OpenRouter API
-- **Smart Suggestions**: AI-generated quick reply suggestions based on conversation context
-- **Animated Typing Indicator**: Beautiful pulsing dots animation while AI is thinking
-- **Multiple Chats**: Support for multiple chat conversations
-- **Modern UI**: Liquid glass design with gradients and smooth animations
-- **Settings Management**: Configure API keys and choose AI models
+- **Чат с AI**: Общение с AI-ассистентами через OpenRouter API
+- **Умные подсказки**: Автоматически генерируемые варианты быстрых ответов на основе контекста беседы
+- **Анимированный индикатор набора**: Красивая анимация пульсирующих точек во время «размышлений» AI
+- **Несколько чатов**: Поддержка нескольких чатов одновременно
+- **Современный интерфейс**: Дизайн в стиле «жидкое стекло» с градиентами и плавными анимациями
+- **Управление настройками**: Настройка API-ключей и выбор моделей AI
 
-## Getting Started
+## Скриншоты
 
-### Prerequisites
+Скриншоты хранятся в папке `screenshots/`. Примеры:
 
-- Flutter SDK (3.0 or higher)
-- Dart SDK (2.17 or higher)
-- Android Studio / VS Code with Flutter extensions
-- OpenRouter API key ([get it here](https://openrouter.ai/))
+### Главный экран чатов
 
-### Installation
+![Chat List](screenshots/chat_list.png)
 
-1. **Clone the repository**
+### Экран переписки с AI
+
+![Chat Room](screenshots/chat_room.png)
+
+### Настройки AI
+
+![AI Settings](screenshots/ai_settings.png)
+
+_Добавьте свои скриншоты в папку `screenshots/` и обновите ссылки выше._
+
+## Начало работы
+
+### Требования
+
+- Flutter SDK (3.0 или выше)
+- Dart SDK (2.17 или выше)
+- Android Studio / VS Code с плагинами Flutter
+- API-ключ OpenRouter ([получить здесь](https://openrouter.ai/))
+
+### Установка
+
+1. **Клонирование репозитория**
 
     ```bash
     git clone https://github.com/yourusername/ai_chat.git
     cd ai_chat
     ```
 
-2. **Install dependencies**
+2. **Установка зависимостей**
 
     ```bash
     flutter pub get
     ```
 
-3. **Configure API Key**
-    - Run the app
-    - Go to Profile → AI Assistant Settings
-    - Enter your OpenRouter API key
-    - Select a model (default: `tencent/hy3-preview:free`)
+3. **Настройка API-ключа**
+    - Запустите приложение
+    - Перейдите в Профиль → Настройки AI-ассистента
+    - Введите ваш API-ключ OpenRouter
+    - Выберите модель (по умолчанию: `tencent/hy3-preview:free`)
 
-4. **Run the app**
+4. **Запуск приложения**
     ```bash
     flutter run
     ```
 
-### Building for Release
+### Сборка релизной версии
 
 **Android:**
 
@@ -60,59 +78,55 @@ flutter build apk --release
 flutter build ios --release
 ```
 
-## Project Structure
+## Структура проекта
 
 ```
 lib/
-├── main.dart                 # App entry point
-├── models.dart               # Data models (Chat, Message, AISuggestion)
-├── providers.dart            # State management (ChatProvider, AIProvider)
-├── theme.dart               # App theme and colors
-├── screens/                 # UI screens
+├── main.dart                 # Точка входа в приложение
+├── models.dart               # Модели данных (Chat, Message, AISuggestion)
+├── providers.dart            # Управление состоянием (ChatProvider, AIProvider)
+├── theme.dart               # Тема и цвета приложения
+├── screens/                 # Экраны приложения
 │   ├── chat_list_screen.dart
 │   ├── chat_room_screen.dart
 │   ├── ai_settings_screen.dart
 │   └── profile_screen.dart
-├── widgets/                 # Reusable widgets
+├── widgets/                 # Переиспользуемые виджеты
 │   ├── message_bubble.dart
 │   ├── chat_input.dart
 │   ├── typing_indicator.dart
 │   ├── ai_suggestion_strip.dart
 │   └── ai_suggestion_sheet.dart
-└── services/                # Business logic
+└── services/                # Бизнес-логика
     └── ai_service.dart
 ```
 
-## Configuration
+## Конфигурация
 
-### AI Models
+### Модели AI
 
-The app uses OpenRouter API. Available models (configured in `lib/providers.dart`):
+Приложение использует OpenRouter API. Доступные модели (настраиваются в `lib/providers.dart`):
 
-- `tencent/hy3-preview:free` (default)
+- `tencent/hy3-preview:free` (по умолчанию)
 
-To add more models, edit the `availableModels` list in `lib/providers.dart`.
+Чтобы добавить другие модели, отредактируйте список `availableModels` в файле `lib/providers.dart`.
 
-### API Key Storage
+### Хранение API-ключа
 
-API keys are stored securely using `shared_preferences` and persist between app launches.
+API-ключи безопасно сохраняются с использованием `shared_preferences` и сохраняются между запусками приложения.
 
-## Dependencies
+## Зависимости
 
 - `flutter`: Flutter SDK
-- `provider`: State management
-- `http`: HTTP requests for AI API
-- `shared_preferences`: Local storage for API keys
-- `intl`: Date formatting
+- `provider`: Управление состоянием
+- `http`: HTTP-запросы к AI API
+- `shared_preferences`: Локальное хранилище для API-ключей
+- `intl`: Форматирование дат
 
-## Contributing
+## Участие в разработке
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+1. Сделайте форк репозитория
+2. Создайте ветку для вашей функции (`git checkout -b feature/amazing-feature`)
+3. Зафиксируйте изменения (`git commit -m 'Add some amazing feature'`)
+4. Отправьте в ветку (`git push origin feature/amazing-feature`)
+5. Откройте Pull Request
