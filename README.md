@@ -11,10 +11,6 @@ A modern Flutter-based messenger application with integrated AI assistant powere
 - **Modern UI**: Liquid glass design with gradients and smooth animations
 - **Settings Management**: Configure API keys and choose AI models
 
-## Screenshots
-
-_(Add screenshots here)_
-
 ## Getting Started
 
 ### Prerequisites
@@ -120,14 +116,3 @@ API keys are stored securely using `shared_preferences` and persist between app 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [OpenRouter](https://openrouter.ai/) for providing AI model access
-- Flutter team for the amazing framework
-
-## Contact
-
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
-
-Project Link: [https://github.com/yourusername/ai_chat](https://github.com/yourusername/ai_chat)
